@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Repaso #{title}
+  h2 Voy a sacar 10
+  p La vida es corta
+  .errors
+  form(action="/api/post", method="post" name="postForm")
+    label(for="nombre") Nombre
+    input#nombre(type="text" name="nombre") 
+    label(for="autor") Autor
+    input#autor(type="text" name="autor") 
+    input(type="submit", value="Enviar")
+  table 
+    thead
+      th id
+      th Nombre
+      th Autor
+      th Opciones 
+    tbody.posts 
+  script(src="/javascripts/main.js")
